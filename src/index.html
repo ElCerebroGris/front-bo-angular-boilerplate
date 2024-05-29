@@ -6,55 +6,33 @@
     <base href="/" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
-
+    <!-- Google Font: Source Sans Pro -->
     <link
       rel="stylesheet"
-      href="bower_components/bootstrap/dist/css/bootstrap.min.css"
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback"
     />
     <!-- Font Awesome -->
+    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css" />
+    <!-- overlayScrollbars -->
     <link
       rel="stylesheet"
-      href="bower_components/font-awesome/css/font-awesome.min.css"
-    />
-    <!-- Ionicons -->
-    <link
-      rel="stylesheet"
-      href="bower_components/Ionicons/css/ionicons.min.css"
+      href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css"
     />
     <!-- Theme style -->
-    <link rel="stylesheet" href="css/AdminLTE.min.css" />
-    <!-- AdminLTE Skins. Choose a skin from the css/skins
-         folder instead of downloading all of them to reduce the load. -->
-    <link rel="stylesheet" href="css/skins/_all-skins.min.css" />
-
-    <!-- Google Font -->
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic"
-    />
+    <link rel="stylesheet" href="dist/css/adminlte.min.css" />
   </head>
-  <body
-    class="sidebar-mini skin-blue-light fixed"
-    style="height: auto; min-height: 100%"
-  >
+  <body class="hold-transition sidebar-mini layout-fixed">
     <app-root></app-root>
 
-    <!-- jQuery 3 -->
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
-    <!-- Bootstrap 3.3.7 -->
-    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <!-- SlimScroll -->
-    <script src="bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
-    <!-- FastClick -->
-    <script src="bower_components/fastclick/lib/fastclick.js"></script>
+    <!-- jQuery -->
+    <script src="plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- overlayScrollbars -->
+    <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
     <!-- AdminLTE App -->
-    <script src="js/adminlte.min.js"></script>
+    <script src="dist/js/adminlte.min.js"></script>
     <!-- AdminLTE for demo purposes -->
-    <script src="js/demo.js"></script>
-    <script>
-      $(document).ready(function () {
-        $(".sidebar-menu").tree();
-      });
-    </script>
+    <script src="dist/js/demo.js"></script>
   </body>
 </html>

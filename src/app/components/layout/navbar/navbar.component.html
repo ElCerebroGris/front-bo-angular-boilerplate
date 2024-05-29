@@ -1,36 +1,52 @@
-<aside class="main-sidebar">
-  <!-- sidebar: style can be found in sidebar.less -->
-  <section class="sidebar" style="height: auto">
-    <!-- Sidebar user panel -->
-    <div class="user-panel">
-      <div class="pull-left image">
-        <img src="img/user2-160x160.jpg" class="img-circle" alt="User Image" />
-      </div>
-      <div class="pull-left info">
-        <p>Alexander Pierce</p>
-        <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
-      </div>
-    </div>
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar main-sidebar-custom elevation-4 sidebar-light-info">
+    <!-- Brand Logo -->
+    <a [routerLink]="['/']" routerLinkActive="router-link-active"  class="brand-link bg-info">
+      <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <span class="brand-text font-weight-light">AdminLTE 3</span>
+    </a>
 
-    <!-- sidebar menu: : style can be found in sidebar.less -->
-    <ul class="sidebar-menu tree" data-widget="tree">
-      <li class="header">MENU</li>
-      <li>
-        <a
-          routerLink="/"
-          routerLinkActive="active"
-        >
-          <i class="fa fa-dashboard"></i> Dashboard
-        </a>
-      </li>
-      <li>
-        <a
-          routerLink="/sample"
-          routerLinkActive="active"
-          ><i class="fa fa-th"></i> Sample</a
-        >
-      </li>
-    </ul>
-  </section>
-  <!-- /.sidebar -->
-</aside>
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user (optional) -->
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="image">
+          <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+        </div>
+        <div class="info">
+          <a [routerLink]="['/']" routerLinkActive="router-link-active"  class="d-block">Admin</a>
+        </div>
+      </div>
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+
+          <li class="nav-item">
+            <a routerLink="/" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{ exact: true }" class="nav-link active">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+                Dashboard
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="sample" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{ exact: true }" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Samples
+              </p>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+
+    <div class="sidebar-custom">
+      <a [routerLink]="['/']" routerLinkActive="router-link-active"  class="btn btn-link"><i class="fas fa-cogs"></i></a>
+      <a [routerLink]="['/']" routerLinkActive="router-link-active"  class="btn btn-secondary hide-on-collapse pos-right">Terminar sessão</a>
+    </div>
+    <!-- /.sidebar-custom -->
+  </aside>
