@@ -23,7 +23,7 @@
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
 
           <li class="nav-item">
-            <a routerLink="/" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{ exact: true }" class="nav-link active">
+            <a routerLink="/" routerLinkActive="router-link-active active" [routerLinkActiveOptions]="{ exact: true }" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
@@ -31,7 +31,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a routerLink="sample" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{ exact: true }" class="nav-link">
+            <a routerLink="sample" routerLinkActive="router-link-active active" [routerLinkActiveOptions]="{ exact: true }" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
                 Samples
@@ -46,7 +46,7 @@
 
     <div class="sidebar-custom">
       <a [routerLink]="['/']" routerLinkActive="router-link-active"  class="btn btn-link"><i class="fas fa-cogs"></i></a>
-      <a [routerLink]="['/']" routerLinkActive="router-link-active"  class="btn btn-secondary hide-on-collapse pos-right">Terminar sessão</a>
+      <a [routerLink]="['/login']" routerLinkActive="router-link-active"  class="btn btn-secondary hide-on-collapse pos-right">Terminar sessão</a>
     </div>
     <!-- /.sidebar-custom -->
   </aside>

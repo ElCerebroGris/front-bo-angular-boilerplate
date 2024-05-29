@@ -15,6 +15,14 @@ export class GeneralService {
   }
 
   postter(url: string, model: any) {
-    return this.http.post('/api/config', model);
+    return this.http.post(this.baseUrl+url, model);
+  }
+
+  putter(url: string, model: any) {
+    return this.http.put(this.baseUrl+url, model);
+  }
+
+  patcher(url: string, model: any) {
+    return this.http.patch(this.baseUrl+url, model);
   }
 }

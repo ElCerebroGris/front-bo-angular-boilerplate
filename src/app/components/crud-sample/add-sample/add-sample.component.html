@@ -3,7 +3,7 @@
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1>Adicionar Item</h1>
+          <h1>{{ isEditMode ? "Editar" : "Adicionar" }} Item</h1>
         </div>
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right"></ol>
@@ -21,7 +21,7 @@
             <h3 class="card-title"></h3>
           </div>
 
-          <form>
+          <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
             <div class="card-body">
               @if (loading) {
               <div class="d-flex justify-content-center">
@@ -32,9 +32,11 @@
                 ></div>
               </div>
               } @if (!loading) {
+
               <div class="form-group">
                 <label for="exampleInputEmail1">Nome</label>
                 <input
+                  formControlName="name"
                   type="email"
                   class="form-control"
                   id="exampleInputEmail1"
@@ -53,7 +55,15 @@
             </div>
 
             <div class="card-footer">
-              <button type="submit" class="btn btn-info">Salvar</button>
+              @if (!loading) {
+              <button
+                type="submit"
+                [disabled]="!profileForm.valid"
+                class="btn btn-info"
+              >
+                {{ isEditMode ? "Actualizar" : "Guardar" }}
+              </button>
+              }
               <a
                 type="button"
                 [routerLink]="['/sample']"

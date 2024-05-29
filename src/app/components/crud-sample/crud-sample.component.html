@@ -32,7 +32,7 @@
                       <i class="fas fa-search"></i>
                     </button>
                     <button
-                      [routerLink]="['/add-sample']"
+                      [routerLink]="['/add-sample/new']"
                       routerLinkActive="router-link-active"
                       type="submit"
                       class="btn btn-primary mx-2"
@@ -59,6 +59,7 @@
                   <tr>
                     <th>ID</th>
                     <th>Nome</th>
+                    <th></th>
                   </tr>
                 </thead>
                 <tbody>
@@ -66,6 +67,16 @@
                   <tr>
                     <td>{{ item.id }}</td>
                     <td>{{ item.name }}</td>
+                    <td>
+                      <button
+                        [routerLink]="['/add-sample/' + item.id]"
+                        routerLinkActive="router-link-active"
+                        type="button"
+                        class="btn btn-primary mx-2"
+                      >
+                        <i class="fas fa-edit"></i>
+                      </button>
+                    </td>
                   </tr>
                   }
                 </tbody>
