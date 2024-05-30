@@ -3,7 +3,7 @@
     <!-- Brand Logo -->
     <a [routerLink]="['/']" routerLinkActive="router-link-active"  class="brand-link bg-info">
       <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">AdminLTE 3</span>
+      <span class="brand-text font-weight-light">AdminBO</span>
     </a>
 
     <!-- Sidebar -->
@@ -44,9 +44,9 @@
     </div>
     <!-- /.sidebar -->
 
-    <div class="sidebar-custom">
+    <div class="sidebar-custom mb-2">
       <a [routerLink]="['/']" routerLinkActive="router-link-active"  class="btn btn-link"><i class="fas fa-cogs"></i></a>
-      <a [routerLink]="['/login']" routerLinkActive="router-link-active"  class="btn btn-secondary hide-on-collapse pos-right">Terminar sessão</a>
+      <a (click)="logout()" href="#" class="btn btn-secondary hide-on-collapse pos-right">Terminar sessão</a>
     </div>
     <!-- /.sidebar-custom -->
   </aside>
